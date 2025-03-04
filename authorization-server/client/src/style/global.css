@@ -1,0 +1,48 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.pure-table th, .pure-table td  {
+    border-width: 0 0 0 0;
+}
+tbody tr:last-child td {
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.table-supplemental td {
+    padding-left: 25px;
+    font-size: .9em;
+    background-color: rgb(204, 255, 204);
+}
+
+.button-small {
+    font-size: 55%;
+}
+
+.button-warning {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(202, 60, 60);
+}
+
+.client_id, .client_secret {
+    cursor:pointer;
+}
+
+.click_fade  {
+    animation: fade 1.5s linear 1 forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

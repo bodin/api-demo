@@ -1,0 +1,31 @@
+@client_id =
+@client_secret =
+
+POST http://localhost:9000/oauth2/token
+Authorization: Basic {{client_id}} {{client_secret}}
+Content-Type: application/x-www-form-urlencoded
+
+grant_type = client_credentials
+&scope=api_api1 api_api2
+
+> {%
+    client.global.set("access_token", response.body.access_token);
+    client.global.set("token_type", response.body.token_type);
+%}
+###
+
+
+GET localhost:8090/v1/free
+Authorization: {{token_type}} {{access_token}}
+###
+
+GET localhost:8090/v1/silver
+Authorization: {{token_type}} {{access_token}}
+###
+
+GET localhost:8090/v1/gold
+Authorization: {{token_type}} {{access_token}}
+###
+
+GET localhost:8090/v1/platinum
+Authorization: {{token_type}} {{access_token}}
