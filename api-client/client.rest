@@ -15,11 +15,11 @@ grant_type = client_credentials
 ###
 
 
-GET localhost:8090/v1/free
+GET localhost:8080/v1/free
 Authorization: {{token_type}} {{access_token}}
 ###
 
-GET localhost:8090/v1/silver
+GET localhost:8080/v1/silver
 Authorization: {{token_type}} {{access_token}}
 ###
 
@@ -27,5 +27,5 @@ GET localhost:8090/v1/gold
 Authorization: {{token_type}} {{access_token}}
 ###
 
-GET localhost:8090/v1/platinum
+GET localhost:8080/v1/platinum
 Authorization: {{token_type}} {{access_token}}

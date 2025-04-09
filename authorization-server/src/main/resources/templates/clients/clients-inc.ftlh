@@ -97,7 +97,7 @@
 
             </fieldset>
             <button type="submit">Add</button>
-            <button onclick="modal.closeModal()">Close</button>
+            <button type="button" onclick="modal.closeModal()">Close</button>
         </form>
     [/@m.modalRemote]
 [/#macro]

@@ -23,6 +23,11 @@ public class Controllers {
         @Autowired
         private LocalClientRepository clients;
 
+        @GetMapping("/site/docs")
+        public String docs() {
+            return "docs";
+        }
+
         @GetMapping("/site/index")
         public String index(HttpServletRequest request, Model m) {
             NewClient nc = (NewClient)request.getSession().getAttribute("new_client");
@@ -74,10 +79,5 @@ public class Controllers {
             return "clients/partials/deleted";
         }
 
-        @GetMapping("/modal")
-        public String modal(Model model) {
-            model.addAttribute("today", OffsetDateTime.now());
-            return "modal/remote-modal";
-        }
     }
 }
