@@ -1,5 +1,5 @@
-@client_id =
-@client_secret =
+@client_id = 94222026-ce94-4de9-bc77-8bd66b3b7f10
+@client_secret = 9f58867b-aa4f-425a-81cf-dea812dc1f2a
 
 POST http://localhost:9000/oauth2/token
 Authorization: Basic {{client_id}} {{client_secret}}
@@ -23,7 +23,7 @@ GET localhost:8080/v1/silver
 Authorization: {{token_type}} {{access_token}}
 ###
 
-GET localhost:8090/v1/gold
+GET localhost:8080/v1/gold
 Authorization: {{token_type}} {{access_token}}
 ###
 

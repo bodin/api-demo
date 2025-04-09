@@ -23,14 +23,14 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
 
-    @Bean
+/*    @Bean
     SecurityFilterChain chain(HttpSecurity http) throws Exception {
 
         return http
                 .securityMatcher("/v3/api-docs")
                 .authorizeHttpRequests(a -> a.anyRequest().permitAll())
                 .build();
-    }
+    }*/
 
     @Component
     public static class WebConfigure implements WebMvcConfigurer {

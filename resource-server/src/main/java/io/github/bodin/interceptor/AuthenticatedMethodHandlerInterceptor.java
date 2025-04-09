@@ -27,7 +27,7 @@ public abstract class AuthenticatedMethodHandlerInterceptor extends MethodHandle
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, HandlerMethod handler) throws Exception {
 
-        if("/v3/api-docs".equalsIgnoreCase(request.getRequestURI())) return true;
+        //if("/v3/api-docs".equalsIgnoreCase(request.getRequestURI())) return true;
 
         if (API.currentJwt().isEmpty()) {
             response.setStatus(HttpStatus.BAD_REQUEST.value());
